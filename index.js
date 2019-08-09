@@ -8,7 +8,16 @@ app.use(
   }),
 );
 app.use(bodyParser.json());
-app.use(cors({}));
+ app.use(
+    cors({
+      credentials: true,
+      origin: [
+        "http://localhost:3000",
+        "https://memcode.leoancap.now.sh",
+        "https://memcode.now.sh",
+      ],
+    }),
+  )
 
 app.set("port", process.env.PORT || 1234);
 
