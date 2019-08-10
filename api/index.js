@@ -1,14 +1,18 @@
-const { evalReasonCode } = require("./evalReasonCode");
+const { evalReasonCode } = require("../evalReasonCode");
 const app = require("express")();
 const bodyParser = require("body-parser");
 const cors = require("cors");
+
 app.use(
   bodyParser.urlencoded({
     extended: true,
   }),
 );
+
 app.use(bodyParser.json());
+
 app.use(cors());
+
 app.options("*", cors());
 
 app.set("port", process.env.PORT || 1234);

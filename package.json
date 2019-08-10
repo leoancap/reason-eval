@@ -2,7 +2,7 @@
   "version": "0.0.1",
   "name": "memcode-eval",
   "scripts": {
-    "start": "node index",
+    "start": "node ./api/index",
     "build": "yarn"
   },
   "dependencies": {
