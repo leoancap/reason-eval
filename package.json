@@ -1,8 +1,8 @@
 {
   "version": "0.0.1",
-  "name": "memcode-eval",
+  "name": "reason-eval",
   "scripts": {
-    "start": "node ./api/index",
+    "start": "node index",
     "build": "yarn"
   },
   "dependencies": {

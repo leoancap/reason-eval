@@ -1,4 +1,4 @@
-const { evalReasonCode } = require("../evalReasonCode");
+const { evalReasonCode } = require("./evalReasonCode");
 const app = require("express")();
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -19,7 +19,6 @@ app.set("port", process.env.PORT || 1234);
 
 app.post("*", (req, res) => {
   const { code, solution, tests, isTesting } = req.body;
-  console.log("here");
   const results = evalReasonCode(isTesting ? code : solution, solution, tests);
   res.writeHeader(200, { "Content-Type": "text/json" });
   res.end(JSON.stringify(results));
